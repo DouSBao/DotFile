@@ -7,6 +7,11 @@ export ZDOTDIR=$HOME/.config/zsh
 # Autoload path
 export FPATH=$ZDOTDIR/autoload:$FPATH
 
+# Fcitx5
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 # History
 export HISTSIZE=1000
 export SAVEHIST=1000
