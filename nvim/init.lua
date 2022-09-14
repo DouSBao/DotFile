@@ -1,0 +1,6 @@
+require "options"
+require "keymaps"
+require "autocmds"
+require "manager"
+require "scheme"
+require "plugins"

@@ -43,7 +43,7 @@ export PROMPT=" %F{yellow}%B%1d %(?.%F{green}.%F{red}) %f%b"
 # Auto Start
 # =====================================
 compinit
-neofetch
+# neofetch
 
 # =====================================
 # Alias
