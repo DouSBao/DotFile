@@ -90,6 +90,8 @@ function(use)
 		config = function() require "gitsigns".setup() end
 	}
 
+	use 'kdheepak/lazygit.nvim'
+
 	-- terminal
 	use 'akinsho/toggleterm.nvim'
 
