@@ -30,7 +30,6 @@ keymap('n', '<S-C-Left>', ':wincmd H<CR>', opt)
 -- leave neovim
 keymap('n', '<S-C>q', ':quitall!>', opt)
 
-
 -- telescope
 keymap('n', '<Leader>tf', ':Telescope find_files<CR>', opt)
 keymap('n', '<Leader>to', ':Telescope oldfiles<CR>', opt)
@@ -40,6 +39,7 @@ keymap('n', '<Leader>n', ':NvimTreeToggle<CR>', opt)
 
 -- nvim-comment
 keymap('n', '<Leader>c', ':CommentToggle<CR>', opt)
+keymap('v', '<Leader>c', ':CommentToggle<CR>', opt)
 
 -- markdown preview
 keymap('n', '<Leader>m', ':Glow!<CR>', opt)
@@ -49,3 +49,5 @@ keymap('n', '<Leader>gs', ':Gitsigns stage_hunk<CR>', opt)
 keymap('n', '<Leader>gu', ':Gitsigns undo_stage_hunk<CR>', opt)
 keymap('n', '<Leader>gr', ':Gitsigns reset_hunk<CR>', opt)
 keymap('n', '<Leader>gp', ':Gitsigns preview_hunk<CR>', opt)
+
+keymap('n', '<Leader>gg', ':LazyGit<CR>', opt)
