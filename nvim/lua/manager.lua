@@ -75,6 +75,9 @@ function(use)
 		config = function() require "glow".setup() end
 	}
 
+	-- html preview
+	use 'turbio/bracey.vim'
+
 	-- comment hilighting
 	use {
 		"folke/todo-comments.nvim",
