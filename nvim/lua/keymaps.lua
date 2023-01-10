@@ -1,6 +1,6 @@
 -- prepare
 local keymap = vim.api.nvim_set_keymap
-local opt = {noremap = true, silent = true}
+local opt = { noremap = true, silent = true }
 
 keymap('', '<Space>', '<Nop>', opt)
 vim.g.mapleader = " "
@@ -51,3 +51,9 @@ keymap('n', '<Leader>gr', ':Gitsigns reset_hunk<CR>', opt)
 keymap('n', '<Leader>gp', ':Gitsigns preview_hunk<CR>', opt)
 
 keymap('n', '<Leader>gg', ':LazyGit<CR>', opt)
+
+-- lsp
+keymap('n', '<Leader>lr', ":lua vim.lsp.buf.rename()<CR>", opt);
+keymap('n', '<Leader>lh', ":lua vim.lsp.buf.hover()<CR>", opt);
+keymap('n', '<Leader>ld', ":lua vim.lsp.buf.definition()<CR>", opt);
+

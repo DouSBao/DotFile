@@ -80,6 +80,6 @@ require('bufferline').setup {
 			delay = 200,
 			reveal = {'close'}
 		},
-		sort_by = 'insert_after_current',
+		sort_by = 'id',
 	}
 }

@@ -50,7 +50,7 @@ require('lsp_signature').setup({
 
 -- using cmp which has more features than default lsp client, therefore need update capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- startup lsp client
 local lspconfig = require('lspconfig')
@@ -92,5 +92,13 @@ lspconfig.html.setup{
 }
 
 lspconfig.cmake.setup{
+	capabilities = capabilities,
+}
+
+lspconfig.cssls.setup{
+	capabilities = capabilities,
+}
+
+lspconfig.tsserver.setup{
 	capabilities = capabilities,
 }

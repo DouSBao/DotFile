@@ -30,6 +30,7 @@ local kind_icons = {
 }
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets"})
 
 -- cmp startup and basic config settings
 cmp.setup{
@@ -43,10 +44,10 @@ cmp.setup{
 	-- option settings
 	----------------------------------------
 	enabled = true,
-	
+
 	-- disable preselect
 	preslect = cmp.PreselectMode.None,
-	
+
 
 	-- enable ghost_test
 	experimental = {
@@ -83,14 +84,15 @@ cmp.setup{
 				buffer = "[Buffer]",
 				path = "[Path]",
 				cmdline = "[Builtin]",
+				luasnip = "[Snippet]",
 			})[entry.source.name]
 
 			return vim_item
 		end
 	},
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    completion = nil,
+    documentation = nil
   },
 }
 
@@ -108,5 +110,13 @@ cmp.setup.cmdline('/', {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = {
 		{ name = "buffer", keyword_length = 2 },
+	}
+})
+
+-- snippets makes html file better
+cmp.setup.filetype({"html"}, {
+	sources = {
+		{ name = "luasnip" },
+		{ name = "nvim_lsp" }
 	}
 })

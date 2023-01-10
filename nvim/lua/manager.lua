@@ -53,6 +53,7 @@ function(use)
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/cmp-nvim-lsp'
+	use 'saadparwaiz1/cmp_luasnip'
 
 	-- language server protocol
 	use 'neovim/nvim-lspconfig'
@@ -107,6 +108,18 @@ function(use)
 
 	-- pretty quickfix box
 	--use "folke/trouble.nvim"
+
+	-- indent line
+	use {
+		'lukas-reineke/indent-blankline.nvim',
+		config = function()
+			require "indent_blankline".setup()
+			vim.cmd[[let g:indent_blankline_char = '┆']]
+		end
+	}
+
+	-- word hilight
+	use 'itchyny/vim-cursorword'
 
 	-- text hilighting, indentation and folding
   	use {
