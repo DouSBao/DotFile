@@ -1,11 +1,13 @@
 /*
+!.gitignore
 !zsh
 !rofi
 !nvim
-!nyxt
 !alacritty
 !polybar
 !feh
 !picom
 !qutebrowser
-!.gitignore
+!sioyek
+!i3
+!neofetch
